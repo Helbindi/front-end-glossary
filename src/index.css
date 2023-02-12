@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  /* Dark Mode */
+  --text-dark-mode: white;
+  --text-accent-dark-mode: #f09c00;
+  --bg-dark-mode: #1f2024;
+
+  /* Light Mode */
+  --text-light-mode: black;
+  --bg-light-mode: rgb(247, 247, 247);
+
+  scroll-behavior: smooth;
+}
+
+.term-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em;
+
+  background-color: var(--text-accent-dark-mode);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+
+  background-color: var(--bg-dark-mode);
+  color: var(--text-dark-mode);
+}
+
+.header-title {
+  text-align: center;
+  color: var(--text-accent-dark-mode);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/front-end-glossary.appspot.com/o/background.png?alt=media");
+  padding: 1em;
+  margin: 0;
+}
+
+.input-searchbar {
+  width: 70%;
+  max-width: 900px;
+  height: 50px;
+  border-radius: 1em;
+  font-size: 1.75rem;
+  padding: 0.75em;
+  text-align: center;
+  outline: none !important;
+}
+
+.input-searchbar:focus {
+  border: 4px solid var(--text-accent-dark-mode);
+}
+
+.letter-query {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.letter-btn {
+  cursor: pointer;
+  color: var(--text-accent-dark-mode);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+}
+
+.letter-btn[aria-selected="true"] {
+  background-color: var(--text-accent-dark-mode);
+  color: var(--text-light-mode);
+}
+
+.type-btn {
+  cursor: pointer;
+  background: none;
+  opacity: 0.3;
+}
+
+.type-btn[aria-selected="true"] {
+  opacity: 1;
+}
+
+.type-query {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.queries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+/* Term CSS */
+.glossary-terms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  padding: 3em 1em 5em 1em;
+}
+
+.term {
+  padding: 1em;
+  max-width: 800px;
+}
+
+.term-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.term-desc {
+  padding: 0 1em 0 1em;
+}
+
+.term-source {
+  padding-left: 1em;
+  color: var(--text-accent-dark-mode);
+}
+
+.top-btn {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 950px) {
+  .input-searchbar {
+    width: 90%;
+    font-size: 1.35rem;
+    padding: 0.75em;
+  }
+
+  .input-searchbar:focus {
+    border: 2px solid var(--text-accent-dark-mode);
+  }
+
+  .glossary-terms {
+    padding-top: 1em;
+  }
+
+  img {
+    width: 48px;
+  }
+
+  .top-btn {
+    bottom: 0;
+    right: 0;
+  }
+}
